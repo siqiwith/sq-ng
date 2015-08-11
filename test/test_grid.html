@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Test Grid</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css">
+    
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/traceur/traceur.js"></script>
+    <script src="bower_components/traceur/bootstrap.js"></script>
+    
+    <link href="bower_components/font-awesome/css/font-awesome.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="../grid/css/base.css" media="all" rel="stylesheet" type="text/css"/>
+    <script type="module">
+        import "./test.js";
+        angular.element(document).ready(function() {
+            console.log("bootstraping...");
+            angular.bootstrap(document, ['testApp']);
+        });
+    </script>
+</head>
+<body ng-controller="TestCtrl">
+    <div style="width: 90%; margin-top: 20px; margin-left: auto; margin-right: auto;">
+    <table sq-grid sq-grid-columns="gridColumns" sq-grid-data="gridData" sq-grid-options="gridOptions">
+    </table>
+    </div>
+</body>
+</html>

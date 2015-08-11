@@ -1,0 +1,6 @@
+<tr>
+    <td ng-repeat="column in ctrl.columns">
+        <div ng-if="column.formatter" ng-bind-html="column.formatter(row[column.name], row)"></div>
+        <div ng-if="!column.formatter">{{row[column.name]}}</div>
+    </td>
+</tr>

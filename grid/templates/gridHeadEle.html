@@ -1,0 +1,6 @@
+<td>
+    <span class="sq-grid-head-label" style="margin-right: 5px;">{{ column.label }}</span>
+    <i title="Sort" ng-if="column.sortable && !column.indirectSort && !column.sortType" ng-click="ctrl.sort($event, column)" class="fa fa-sort"></i>
+    <i title="Ascending" ng-if="column.sortable && !column.indirectSort && column.sortType == 'ascending'" ng-click="ctrl.sort($event, column)" class="sq-direct-sort-up fa fa-caret-up"></i>
+    <i title="Descending" ng-if="column.sortable && !column.indirectSort && column.sortType == 'descending'" ng-click="ctrl.sort($event, column)" class="sq-direct-sort-down fa fa-caret-down"></i>
+</td>
